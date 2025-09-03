@@ -79,6 +79,33 @@ function WinMusica() {
                   src={songs[selectedIndex]}
                 />
               </div>
+              <div className="songs-playlist">
+                {/* <CollectionSongs/> */}
+                {playlists.map((song, index) => {
+                  const isSelected = selectedIndex == index;
+                  return (
+                    <>
+                      <motion.div
+                        key={index}
+                        whileTap={{ scale: 0.95 }}
+                        onTap={() => setSelectedIndex(index)}
+                        // onHoverStart={()=> setSelected(true)}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <div className={isSelected ? 'each-song-selected' : 'each-song-unset'}>
+                          <Marquee
+                            key={isSelected ? 'selected' : 'not-selected'}
+                            checkOverflow={isSelected ? true : false}
+                            play={isSelected ? true : false}
+                          >
+                            {song.title}
+                          </Marquee>
+                        </div>
+                      </motion.div>
+                    </>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </Draggable>
