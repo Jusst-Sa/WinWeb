@@ -1,12 +1,14 @@
 import FocusInput from './EXC/FocusInput'
 import './Pinta.css'
-import Win from './Window/Win'
+import WinMusica from './Window/Music Window/WinMusica'
+import WinPaint from './Window/Paint Window/WinPaint'
 
 
 function Pinta(){
     return(
         <>
-        <Win/>
+        <WinMusica/>
+        <WinPaint/>
         </>
     )
 }

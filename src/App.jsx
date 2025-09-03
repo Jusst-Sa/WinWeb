@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Lodin/>
+      {/* <Lodin/> */}
       <Pinta/>
       {/* <Background/> */}
     </>
